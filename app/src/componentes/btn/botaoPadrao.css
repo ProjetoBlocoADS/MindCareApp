@@ -1,0 +1,21 @@
+button{
+    padding: 0.3rem 1rem;
+    color: white;
+    border-radius: 6px ;
+    border: none;
+}
+
+.botaoClaro{
+    background-color: steelblue;
+}
+
+.botaoEscuro{
+    background-color: #033991;
+}
+
+.toolbar-botao{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1.5rem 0rem;
+}
