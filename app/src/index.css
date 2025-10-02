@@ -13,6 +13,6 @@
 
 .banner{
   object-fit: cover;
-  width: clamp(250px, 50vw, 600px);
-  margin: auto;
+  width: clamp(260px, 50vw, 600px);
+  margin: 0 auto;
 }

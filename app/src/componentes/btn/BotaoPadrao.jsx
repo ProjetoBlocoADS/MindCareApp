@@ -1,8 +1,8 @@
 import "./botaoPadrao.css"
 
-export default function BotaoPadrao({children, style}) {
+export default function BotaoPadrao({children, style, onClick}) {
     return (
-        <button className={style}>
+        <button onClick={onClick} className={style}>
             {children}
         </button>
     );
