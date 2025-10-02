@@ -3,6 +3,8 @@ import "./home.css"
 import Descricao from "../../componentes/descricao/Descricao"
 import BotaoPadrao from "../../componentes/btn/BotaoPadrao"
 import { useNavigate } from "react-router-dom"
+import SideMenu from "../../componentes/SideMenuHome/SideMenu"
+
 
 const textos = {
   home: {
@@ -11,13 +13,18 @@ const textos = {
 }
 
 export default function Home(params) {
+     
 
     const navigate = useNavigate();
 
     const handleClickLogin = () => navigate('/login');
     const handleClickCadastro = () => navigate('/cadastro')
 
+    
+    
+
     return (<div className="home">
+        <SideMenu />
         <img className="banner" src={banner} alt="Ilustração Mental Quebra-Cabeças" />
         <div className="">
             <Descricao titulo={textos.home.descricao[0].titulo} descricao={textos.home.descricao[0].descricao} />
