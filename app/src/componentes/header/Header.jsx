@@ -3,7 +3,7 @@ import LogoMindCare from "../logoMindCare/LogoMindCare";
 import { Menu } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 
-export default function Header() {
+export default function Header({alterMenu}) {
 
     const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <header onClick={handleClick} className="header">
             <LogoMindCare />
-            <Menu size={30} />
+            <Menu onClick={(e) => { e.stopPropagation(); alterMenu(); }} size={30} />
         </header>
     );
 }

@@ -12,7 +12,7 @@ const textos = {
   }
 }
 
-export default function Home(params) {
+export default function Home({openMenu, closeSideMenu}) {
      
 
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function Home(params) {
     
 
     return (<div className="home">
-        <SideMenu />
+        <SideMenu closeMenu={closeSideMenu} menuOpen={openMenu} />
         <img className="banner" src={banner} alt="Ilustração Mental Quebra-Cabeças" />
         <div className="">
             <Descricao titulo={textos.home.descricao[0].titulo} descricao={textos.home.descricao[0].descricao} />

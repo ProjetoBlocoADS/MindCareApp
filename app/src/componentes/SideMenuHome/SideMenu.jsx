@@ -3,10 +3,10 @@ import LogoMindCare from "../logoMindCare/LogoMindCare"
 import { Brain } from 'lucide-react';
 import { ChevronsRight } from 'lucide-react';
 
-export default function SideMenu({isOpen}){
+export default function SideMenu({menuOpen, closeMenu}){
     
     return(
-        <nav className="menuNav">
+        <nav className={`menuNav ${menuOpen? "Open": ""}`}>
             <Brain size={35} color="white" />
             <ul className="lista">
                 <li><a href="">Logar</a></li>
@@ -17,7 +17,7 @@ export default function SideMenu({isOpen}){
                 <li><a href="">Preciso de Ajuda</a></li>
                 <li><a href="">FAQ</a></li>
             </ul>
-            <div className="div-chevron">
+            <div className="div-chevron" onClick={()=>closeMenu()}>
                  <ChevronsRight color="white" size={48} />
             </div>
         </nav>
