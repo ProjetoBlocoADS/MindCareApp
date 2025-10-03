@@ -8,7 +8,7 @@
 .app-container{
   display: flex ;
   flex-direction: column;
-  margin: 0rem 1rem;
+  margin: 0rem 0rem;
 }
 
 .banner{
