@@ -34,7 +34,7 @@ export default function Login() {
                         type="checkbox"
                         id="remember"
                     />
-                    <label htmlFor="remember"> Lembrar-me</label>
+                    <label htmlFor="remember">Lembrar-me</label>
                 </div>
                 <BotaoPadrao style="botaoEscuro">Logar</BotaoPadrao>
             </div>

@@ -17,9 +17,15 @@
 
 .campo-digitacao {
   border-radius: 8px;
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
   height: 35px;
   padding: 0 10px;
+  border: 1px solid gray;
+}
+
+.checkbox-container{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .label{
