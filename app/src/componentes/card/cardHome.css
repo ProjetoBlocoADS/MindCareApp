@@ -1,0 +1,35 @@
+.image-with-label-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-with-label-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7; /* Transparência da imagem */
+}
+
+.image-with-label-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-with-label-text {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
