@@ -1,20 +1,25 @@
-import "./header.css"
+import "./header.css";
 import LogoMindCare from "../logoMindCare/LogoMindCare";
-import { Menu } from 'lucide-react';
+import { Menu } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import SideMenu from "../SideMenuHome/SideMenu";
+import { useState } from "react";
 
+export default function Header() {
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-export default function Header({alterMenu}) {
-
-    const navigate = useNavigate();
-
-    const handleClick = () => navigate('/')
-
-
-    return (
-        <header onClick={handleClick} className="header">
-            <LogoMindCare style="logo"/>
-            <Menu onClick={(e) => { e.stopPropagation(); alterMenu(); }} size={30} />
-        </header>
-    );
+  return (
+    <header onClick={() => navigate("/")} className="header">
+      <LogoMindCare style="logo" />
+      <Menu
+        onClick={(e) => {
+          e.stopPropagation();
+          setMenuOpen((prev) => !prev);
+        }}
+        size={30}
+      />
+      <SideMenu menuOpen={menuOpen} closeMenu={() => setMenuOpen(false)} />
+    </header>
+  );
 }
