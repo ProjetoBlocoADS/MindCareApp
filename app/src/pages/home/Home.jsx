@@ -1,4 +1,6 @@
 import banner from "../../assets/home/ilustraHome.png";
+import acompanhamento from "../../assets/home/acompanhamento.jpg";
+import tratamento from "../../assets/home/tratamento.jpg";
 import "./home.css";
 import Descricao from "../../componentes/descricao/Descricao";
 import BotaoPadrao from "../../componentes/btn/BotaoPadrao";
@@ -20,8 +22,8 @@ const conteudo = {
       },
     ],
     cards: [
-      { image: banner, label: "Acompanhamento", alt: "ilustração" },
-      { image: banner, label: "Acompanhamento", alt: "ilustração" },
+      { image: acompanhamento, label: "Acompanhamento", alt: "ilustração" },
+      { image: tratamento, label: "Tratamento", alt: "ilustração" },
     ],
   },
 };

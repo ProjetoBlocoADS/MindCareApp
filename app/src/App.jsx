@@ -3,12 +3,13 @@ import Home from "./pages/home/Home";
 import Header from "./componentes/header/Header";
 import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
+import Footer from "./componentes/footer/Footer";
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
         <Header />
+      <div className="app-container">
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -17,6 +18,7 @@ function App() {
           </Routes>
         </main>
       </div>
+        <Footer />  
     </Router>
   );
 }
