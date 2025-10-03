@@ -1,5 +1,5 @@
 button{
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     color: white;
     border-radius: 6px ;
     border: none;
@@ -17,5 +17,5 @@ button{
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    margin: 1.5rem 0rem;
+    margin: 0.5rem 0rem 1rem 0rem;
 }
