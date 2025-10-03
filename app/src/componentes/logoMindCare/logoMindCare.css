@@ -1,3 +1,11 @@
+.logo-branco{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+
+}
+
 .logo{
     display: flex;
     align-items: center;
