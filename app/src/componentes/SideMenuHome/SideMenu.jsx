@@ -17,6 +17,7 @@ export default function SideMenu({ menuOpen, closeMenu }) {
     <nav onClick={(e) => e.stopPropagation()} className={`menuNav ${menuOpen ? "Open" : ""}`}>
       <Brain size={35} color="white" />
       <ul className="lista">
+        <li onClick={(e) => handleNavigate(e, "/")}><a>Home</a></li>
         <li onClick={(e) => handleNavigate(e, "/login")}><a>Logar</a></li>
         <li onClick={(e) => handleNavigate(e, "/cadastro")}><a>Cadastre-se</a></li>
         <li onClick={(e) => handleNavigate(e, "/sobre")}><a>Sobre</a></li>
