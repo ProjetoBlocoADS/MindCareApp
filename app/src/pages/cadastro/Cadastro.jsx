@@ -90,8 +90,7 @@ function Cadastro() {
                 placeholder="Digite seu número de CRP"
                 required
               />
-              <br />
-              <br />
+             
             </div>
 
           )}
