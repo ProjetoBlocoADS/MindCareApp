@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.cadastro-title {
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+li {
+  font-size: 0.9rem;
+  text-align: start;
+}
+
+.cadastro-container {
+  background-color: #fff;
+  padding: 24px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.cadastro-content {
+  background-color: steelblue;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+  color: #fff;
+}
+
+h2,
+label {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.campo-digitacao {
+  width: 300px;
+  height: 44px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+  color: #333;
+  appearance: none;
+}
+
+select.campo-digitacao {
+  appearance: none;
+  background-color: #fff;
+}
+
+.campo-digitacao:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+@media (max-width: 360px) {
+  .cadastro-content {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .campo-digitacao {
+    height: 42px;
+    font-size: 0.9rem;
+  }
+
+  h2,
+  label {
+    font-size: 0.9rem;
+  }
+}
+
