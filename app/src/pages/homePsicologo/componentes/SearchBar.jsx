@@ -1,6 +1,12 @@
 import { Funnel, CircleArrowDown, Search } from 'lucide-react';
 
-export default function SearchBar() {
+export default function SearchBar({onChangeValue, inputValue}) {
+
+// aqui o valor do input sera passado como argumento para qualquer metodo em outro componente
+const handleChange = (e) => {
+  onChangeValue(e.target.value); // atualiza o estado do input
+};
+
   return (
     <div className="w-[328px] h-[52px] flex items-center px-4 mt-6 bg-[#134496] mx-auto rounded-[26px]">
       <div className="relative flex items-center ">
@@ -8,6 +14,8 @@ export default function SearchBar() {
         <input
           type="text"
           placeholder="Search"
+          value={inputValue}
+          onChange={handleChange}
           className="px-6 pl-10 py-2 w-[223px] h-[34px] rounded-[26px] outline-none"
         />
       </div>

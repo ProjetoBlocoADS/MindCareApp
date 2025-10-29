@@ -7,6 +7,11 @@ export default function ListaPsicologos(){
     const [profissionais, setProfissionais] = useState([])
     const [error, setError] = useState(null);
     const [isLoading, setLoading] = useState(false);
+    const [inputValue, setInputValue] = useState("");
+
+const handleInputChange = (value) => {
+  setInputValue(value);
+};
 
     useEffect(()=>{
         setLoading(true)
@@ -42,10 +47,15 @@ export default function ListaPsicologos(){
         )
     }
 
+    //logica para filtrar profissionais na barra de pesquisa
+    const matchedProfessionals = profissionais.filter((prof) =>
+        prof.nome.toLowerCase().includes(inputValue.toLowerCase())
+    );
+
     return(
         <div>
-            <SearchBar/>
-            {profissionais.map((psico)=>(
+            <SearchBar onChangeValue={handleInputChange} value={inputValue}/>
+            {matchedProfessionals.map((psico)=>(
                 <div key={psico.nome}>
                     <Calendar/>
                     <div className={styles.profile}>
