@@ -9,12 +9,14 @@ export default function ListaPsicologos(){
         setLoading(true)
         async function fetchPsicologos(){
         try{
-            const response = await fetch ("../public/psicologos.json")
+            const response = await fetch ("/psicologos.json")
             if (!response.ok) {
           throw new Error(`Erro ao buscar dados: ${response.status}`);
         }
-        const data = response.json();
+        const data = await response.json();
+        console.log(data)
         setProfissionais(data)
+        
         }catch(erro){
             setError(erro.message)
         }finally{
@@ -38,6 +40,13 @@ export default function ListaPsicologos(){
     }
 
     return(
-        
+        <div>
+            {profissionais.map((psico)=>(
+                <div key={psico.nome}>
+                    <p>{psico.nome}</p>
+                    <p>{psico.especialidade}</p>
+                </div>
+            ))}
+        </div>
     )
 }

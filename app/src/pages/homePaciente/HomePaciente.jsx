@@ -1,3 +1,7 @@
+import ListaPsicologos from "./ListaPsicologos"
+
 export default function HomePaciente() {
-    return <> Pedrao e Dany, codem aqui</>
+    return(
+        <ListaPsicologos/>
+    )
 }
