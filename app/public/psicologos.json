@@ -1,0 +1,50 @@
+[
+  {
+    "nome": "Dr. Paulo Teixeira",
+    "especialidade": "Terapia Cognitivo-Comportamental",
+    "horario": "14:00",
+    "data": "2025-11-05"
+  },
+  {
+    "nome": "Dra. Mariana Costa",
+    "especialidade": "Psicanálise",
+    "horario": "10:30",
+    "data": "2025-11-06"
+  },
+  {
+    "nome": "Dr. Ricardo Almeida",
+    "especialidade": "Terapia de Casal e Família",
+    "horario": "16:00",
+    "data": "2025-11-07"
+  },
+  {
+    "nome": "Dra. Fernanda Oliveira",
+    "especialidade": "Psicologia Infantil",
+    "horario": "09:00",
+    "data": "2025-11-08"
+  },
+  {
+    "nome": "Dr. Lucas Mendes",
+    "especialidade": "Psicologia Organizacional",
+    "horario": "15:30",
+    "data": "2025-11-09"
+  },
+  {
+    "nome": "Dra. Camila Ribeiro",
+    "especialidade": "Neuropsicologia",
+    "horario": "11:00",
+    "data": "2025-11-10"
+  },
+  {
+    "nome": "Dr. André Santos",
+    "especialidade": "Psicoterapia Humanista",
+    "horario": "13:30",
+    "data": "2025-11-11"
+  },
+  {
+    "nome": "Dra. Juliana Martins",
+    "especialidade": "Terapia Comportamental Dialética (DBT)",
+    "horario": "17:00",
+    "data": "2025-11-12"
+  }
+]
