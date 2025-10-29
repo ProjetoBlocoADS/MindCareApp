@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Calendar,Dot } from "lucide-react";
+import SearchBar from "../homePsicologo/componentes/SearchBar";
+import styles from "./listaPsicologos.module.css"
 
 export default function ListaPsicologos(){
     const [profissionais, setProfissionais] = useState([])
@@ -41,10 +44,18 @@ export default function ListaPsicologos(){
 
     return(
         <div>
+            <SearchBar/>
             {profissionais.map((psico)=>(
                 <div key={psico.nome}>
-                    <p>{psico.nome}</p>
-                    <p>{psico.especialidade}</p>
+                    <Calendar/>
+                    <div className={styles.profile}>
+                         <p className={styles.profileName}>{psico.nome}</p>
+                        <p className={styles.profileEspecialidade}>{psico.especialidade}</p>
+                    </div>
+                    <div className={styles.dataHora}>
+                        <div className={styles.data}><Dot/>{psico.data}<Dot/></div>
+                        <p className={styles.horario}>{psico.horario}</p>
+                    </div>
                 </div>
             ))}
         </div>
