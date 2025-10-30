@@ -6,10 +6,12 @@ import Cadastro from "./pages/cadastro/Cadastro";
 import Footer from "./componentes/footer/Footer";
 import HomePsicologo from "./pages/homePsicologo/HomePsicologo";
 import HomePaciente from "./pages/homePaciente/HomePaciente"
+import PsicoProvider from "./provider/PsicoProvider";
 
 function App() {
   return (
     <Router>
+      <PsicoProvider>
         <Header />
       <div className="app-container">
         <main>
@@ -23,6 +25,7 @@ function App() {
         </main>
       </div>
         <Footer />  
+        </PsicoProvider>
     </Router>
   );
 }

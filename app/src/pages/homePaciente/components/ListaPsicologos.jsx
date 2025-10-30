@@ -1,61 +1,37 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useContext } from "react";
+import PsicoContext from "../../../context/PsicoContext";
 import { Calendar,Dot } from "lucide-react";
 import SearchBar from "../../homePsicologo/componentes/SearchBar";
 import styles from "../listaPsicologos.module.css"
+import Filtros from "./Filtros";
 
 export default function ListaPsicologos(){
-    const [profissionais, setProfissionais] = useState([])
-    const [error, setError] = useState(null);
-    const [isLoading, setLoading] = useState(false);
+    const {profissionais, error, isLoading} = useContext(PsicoContext)
     const [inputValue, setInputValue] = useState("");
 
 const handleInputChange = (value) => {
   setInputValue(value);
 };
 
-    useEffect(()=>{
-        setLoading(true)
-        async function fetchPsicologos(){
-        try{
-            const response = await fetch ("/psicologos.json")
-            if (!response.ok) {
-          throw new Error(`Erro ao buscar dados: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log(data)
-        setProfissionais(data)
-        
-        }catch(erro){
-            setError(erro.message)
-        }finally{
-            setLoading(false)
-        }
-        }
-      
-        fetchPsicologos();
-    },[])
-
-    if(error){
-        return(
-            <p>Erro ao buscar os Psicologos(as)</p>
-        )
-    }
-
-     if(isLoading){
-        return(
-            <p>Carregando a lista de psicologos(as)...</p>
-        )
-    }
-
     //logica para filtrar profissionais na barra de pesquisa
     const matchedProfessionals = profissionais.filter((prof) =>
         prof.nome.toLowerCase().includes(inputValue.toLowerCase()) ||
-        prof.especialidade.toLowerCase().includes(inputValue.toLowerCase())
+        prof.especialidade.join(" ").toLowerCase().includes(inputValue.toLowerCase())
     );
+
+      if (error) {
+    return <div>Erro ao buscar os Psicologos(as)</div>;
+  }
+
+  if (isLoading) {
+    return <div>Carregando a lista de psicologos(as)...</div>;
+  }
 
     return(
         <div>
             <SearchBar onChangeValue={handleInputChange} value={inputValue} placeholder={"Pesquisar"}/>
+            <Filtros/>
             {matchedProfessionals.map((psico)=>(
                 <div key={psico.nome}>
                     <Calendar/>

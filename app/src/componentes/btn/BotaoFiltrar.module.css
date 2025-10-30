@@ -1,0 +1,7 @@
+.botao{
+    background-color: steelblue;
+}
+
+.botao:hover{
+    transform: scale(1.2);
+}

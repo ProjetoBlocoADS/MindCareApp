@@ -1,5 +1,6 @@
 import ListaPsicologos from "./components/ListaPsicologos"
 
+
 export default function HomePaciente() {
     return(
         <div>
