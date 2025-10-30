@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Calendar,Dot } from "lucide-react";
-import SearchBar from "../homePsicologo/componentes/SearchBar";
+import SearchBar from "../../homePsicologo/componentes/SearchBar";
 import styles from "./listaPsicologos.module.css"
 
 export default function ListaPsicologos(){
@@ -49,12 +49,13 @@ const handleInputChange = (value) => {
 
     //logica para filtrar profissionais na barra de pesquisa
     const matchedProfessionals = profissionais.filter((prof) =>
-        prof.nome.toLowerCase().includes(inputValue.toLowerCase())
+        prof.nome.toLowerCase().includes(inputValue.toLowerCase()) ||
+        prof.especialidade.toLowerCase().includes(inputValue.toLowerCase())
     );
 
     return(
         <div>
-            <SearchBar onChangeValue={handleInputChange} value={inputValue}/>
+            <SearchBar onChangeValue={handleInputChange} value={inputValue} placeholder={"Pesquisar"}/>
             {matchedProfessionals.map((psico)=>(
                 <div key={psico.nome}>
                     <Calendar/>

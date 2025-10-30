@@ -1,6 +1,6 @@
 import { Funnel, CircleArrowDown, Search } from 'lucide-react';
 
-export default function SearchBar({onChangeValue, inputValue}) {
+export default function SearchBar({onChangeValue, inputValue, placeholder}) {
 
 // aqui o valor do input sera passado como argumento para qualquer metodo em outro componente
 const handleChange = (e) => {
@@ -13,7 +13,7 @@ const handleChange = (e) => {
         <Search className="absolute left-3 text-[#134496] w-4 h-4" />
         <input
           type="text"
-          placeholder="Search"
+          placeholder={placeholder}
           value={inputValue}
           onChange={handleChange}
           className="px-6 pl-10 py-2 w-[223px] h-[34px] rounded-[26px] outline-none"

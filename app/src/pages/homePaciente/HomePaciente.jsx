@@ -1,4 +1,4 @@
-import ListaPsicologos from "./ListaPsicologos"
+import ListaPsicologos from "./components/ListaPsicologos"
 
 export default function HomePaciente() {
     return(
