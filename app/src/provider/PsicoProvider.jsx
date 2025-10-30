@@ -20,7 +20,6 @@ export default function PsicoProvider({children}){
           throw new Error(`Erro ao buscar dados: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data)
         setProfissionais(data)
         
         }catch(erro){

@@ -1,5 +1,5 @@
 import ListaPsicologos from "./components/ListaPsicologos"
-
+import BotaoFiltrar from "../../componentes/btn/BotaoFiltrar"
 
 export default function HomePaciente() {
     return(
@@ -10,6 +10,7 @@ export default function HomePaciente() {
           Consultas
         </h2>
       </div>
+      <BotaoFiltrar/>
        <ListaPsicologos/>
         </div>
        
