@@ -16,3 +16,8 @@
   width: clamp(260px, 50vw, 600px);
   margin: 0 auto;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -1,17 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .containerModal{
+    position: fixed;
+    top: 0;
     color:white;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 1px;
-    margin-top: 10px;
-    height: 100dvh;
+    height: 100%;
     min-width: 100%;
+    background-color: white;
+    padding: 8px;
 }
 .linkFiltro{
     display: flex;

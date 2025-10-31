@@ -1,16 +1,16 @@
 import ListaPsicologos from "./components/ListaPsicologos"
-import BotaoFiltrar from "../../componentes/btn/BotaoFiltrar"
+import styles from "./HomePaciente.module.css"
+
 
 export default function HomePaciente() {
     return(
-        <div>
+        <div className={styles.container}>
         <div>
         <h4>Seja Bem Vindo!</h4>
         <h2>
           Consultas
         </h2>
       </div>
-      <BotaoFiltrar/>
        <ListaPsicologos/>
         </div>
        

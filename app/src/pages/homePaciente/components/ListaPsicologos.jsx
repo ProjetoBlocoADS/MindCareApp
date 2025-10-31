@@ -4,15 +4,27 @@ import PsicoContext from "../../../context/PsicoContext";
 import { Calendar,Dot } from "lucide-react";
 import SearchBar from "../../homePsicologo/componentes/SearchBar";
 import styles from "../listaPsicologos.module.css"
-import Filtros from "./Filtros";
-
+import ModalFiltros from "./ModalFiltros";
+import BotaoFiltrar from "../../../componentes/btn/BotaoFiltrar"
 export default function ListaPsicologos(){
     const {profissionais, error, isLoading} = useContext(PsicoContext)
     const [inputValue, setInputValue] = useState("");
+    const [isOpen, setIsOpen] = useState(false)
+    
+    
 
 const handleInputChange = (value) => {
   setInputValue(value);
 };
+
+const handleModal = (callback) => {
+  if (typeof callback === "function") {
+    setIsOpen(callback); 
+  } else {
+    setIsOpen(callback);
+  }
+};
+
 
     //logica para filtrar profissionais na barra de pesquisa
     const matchedProfessionals = profissionais.filter((prof) =>
@@ -29,9 +41,10 @@ const handleInputChange = (value) => {
   }
 
     return(
-        <div>
+        <div className={styles.containerLista}>
             <SearchBar onChangeValue={handleInputChange} value={inputValue} placeholder={"Pesquisar"}/>
-            <Filtros/>
+            <BotaoFiltrar openModal={handleModal}/>
+            {isOpen && (<ModalFiltros/>)}
             {matchedProfessionals.map((psico)=>(
                 <div key={psico.nome}>
                     <Calendar/>
