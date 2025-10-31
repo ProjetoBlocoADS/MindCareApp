@@ -22,7 +22,7 @@ const pacientes = [
 export default function ListaPacientes() {
   return (
     <div className="w-full max-w-[359px] h-[500px] bg-[#EEEEEE] rounded-[24px] mx-auto mb-10">
-      <SearchBar />
+      <SearchBar placeholder={"Search"} />
 
       <div className="flex flex-col gap-2 mx-auto items-center mt-3">
         {pacientes.map((paciente) => (
