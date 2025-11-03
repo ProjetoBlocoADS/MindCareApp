@@ -1,0 +1,25 @@
+
+
+.containerModal{
+    position: fixed;
+    top: 0;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    height: 100%;
+    min-width: 100%;
+    background-color: white;
+    padding: 8px;
+}
+.linkFiltro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: steelblue;
+    padding: 5px;
+}
+
+.linkFiltro h2{
+    font-size: 14px;
+}

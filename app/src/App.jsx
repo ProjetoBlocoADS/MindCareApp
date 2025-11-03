@@ -5,10 +5,14 @@ import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
 import CadastroPassword from "./pages/cadastro/cadastroPassword";
 import Footer from "./componentes/footer/Footer";
+import HomePsicologo from "./pages/homePsicologo/HomePsicologo";
+import HomePaciente from "./pages/homePaciente/HomePaciente"
+import PsicoProvider from "./provider/PsicoProvider";
 
 function App() {
   return (
     <Router>
+      <PsicoProvider>
         <Header />
       <div className="app-container">
         <main>
@@ -16,10 +20,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/home-psicologo" element={<HomePsicologo />} />
+            <Route path="/home-paciente" element={<HomePaciente />} />
           </Routes>
         </main>
       </div>
-        <Footer /> 
+        <Footer />  
+        </PsicoProvider>
     </Router>
   );
 }
