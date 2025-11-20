@@ -6,8 +6,10 @@
     "especialidade": ["Ansiedade", "Depressão", "TOC"],
     "genero": "masc",
     "valorSessao": 180,
-    "data": "05/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "03/12/2025": ["09:00", "11:00", "14:00", "15:00"],
+      "04/12/2025": ["10:00", "13:00", "16:00"]
+    }
   },
   {
     "id": 2,
@@ -16,8 +18,10 @@
     "especialidade": ["Autoconhecimento", "Relacionamentos", "Traumas"],
     "genero": "fem",
     "valorSessao": 220,
-    "data": "04/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "02/12/2025": ["09:00", "11:00", "15:00"],
+      "03/12/2025": ["10:00", "14:00", "16:00"]
+    }
   },
   {
     "id": 3,
@@ -26,8 +30,10 @@
     "especialidade": ["Terapia de Casal", "Conflitos familiares", "Relacionamentos"],
     "genero": "masc",
     "valorSessao": 250,
-    "data": "06/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "04/12/2025": ["09:00", "15:00"],
+      "05/12/2025": ["10:00", "14:00"]
+    }
   },
   {
     "id": 4,
@@ -36,8 +42,10 @@
     "especialidade": ["Psicologia Infantil", "Adolescentes", "Dificuldades de aprendizagem"],
     "genero": "fem",
     "valorSessao": 170,
-    "data": "07/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "05/12/2025": ["09:00", "11:00", "15:00"],
+      "06/12/2025": ["10:00", "13:00", "16:00"]
+    }
   },
   {
     "id": 5,
@@ -46,8 +54,10 @@
     "especialidade": ["Carreira", "Síndrome de Burnout", "Liderança"],
     "genero": "masc",
     "valorSessao": 200,
-    "data": "05/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "03/12/2025": ["09:00", "15:00"],
+      "04/12/2025": ["11:00", "14:00", "16:00"]
+    }
   },
   {
     "id": 6,
@@ -56,8 +66,10 @@
     "especialidade": ["Avaliação Neuropsicológica", "TDAH", "Reabilitação Cognitiva"],
     "genero": "fem",
     "valorSessao": 280,
-    "data": "03/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "01/12/2025": ["09:00", "11:00", "15:00"],
+      "02/12/2025": ["10:00", "12:00", "14:00"]
+    }
   },
   {
     "id": 7,
@@ -66,18 +78,26 @@
     "especialidade": ["Autoconhecimento", "Sentido da vida", "Ansiedade"],
     "genero": "masc",
     "valorSessao": 160,
-    "data": "06/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "04/12/2025": ["09:00", "11:00"],
+      "05/12/2025": ["10:00", "14:00", "16:00"]
+    }
   },
   {
     "id": 8,
     "nome": "Dra. Juliana Martins",
     "abordagem": "Terapia Comportamental Dialética (DBT)",
-    "especialidade": ["Transtorno de Personalidade Borderline", "Desregulação Emocional", "Autolesão"],
+    "especialidade": [
+      "Transtorno de Personalidade Borderline",
+      "Desregulação Emocional",
+      "Autolesão"
+    ],
     "genero": "fem",
     "valorSessao": 210,
-    "data": "04/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "02/12/2025": ["09:00", "11:00", "15:00"],
+      "03/12/2025": ["10:00", "13:00", "16:00"]
+    }
   },
   {
     "id": 9,
@@ -86,8 +106,10 @@
     "especialidade": ["Autoconhecimento", "Questões LGBTQIA+", "Ansiedade"],
     "genero": "outro",
     "valorSessao": 190,
-    "data": "07/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "05/12/2025": ["09:00", "15:00"],
+      "06/12/2025": ["10:00", "14:00", "16:00"]
+    }
   },
   {
     "id": 10,
@@ -96,8 +118,10 @@
     "especialidade": ["Depressão", "Fobias", "Compulsões"],
     "genero": "fem",
     "valorSessao": 175,
-    "data": "03/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "01/12/2025": ["09:00", "11:00", "15:00"],
+      "02/12/2025": ["10:00", "13:00", "16:00"]
+    }
   },
   {
     "id": 11,
@@ -106,8 +130,10 @@
     "especialidade": ["Luto", "Relacionamentos", "Traumas de infância"],
     "genero": "masc",
     "valorSessao": 230,
-    "data": "08/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "06/12/2025": ["09:00", "11:00"],
+      "07/12/2025": ["10:00", "14:00", "16:00"]
+    }
   },
   {
     "id": 12,
@@ -116,7 +142,9 @@
     "especialidade": ["Carreira", "Ansiedade", "Autoestima"],
     "genero": "fem",
     "valorSessao": 150,
-    "data": "05/11/2025",
-    "horario": "15:00h"
+    "agenda": {
+      "03/12/2025": ["09:00", "11:00", "15:00"],
+      "04/12/2025": ["10:00", "13:00", "16:00"]
+    }
   }
 ]
