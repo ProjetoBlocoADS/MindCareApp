@@ -1,0 +1,206 @@
+/* ======================================= */
+/* 1. CONTAINER / OVERLAY (Mobile First) */
+/* ======================================= */
+
+.containerCalendario {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px); 
+  z-index: 1000; 
+  overflow-y: auto; 
+}
+
+.boxCalendario {
+  background-color: white;
+  padding: 20px; 
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 95vw; 
+  max-width: 360px; 
+  text-align: center;
+  position: relative; 
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;    
+    right: 10px;  
+    font-size: 1.2em; 
+    cursor: pointer;
+    color: #666;
+    background: none;
+    border: none;
+    padding: 5px;
+    z-index: 1001; 
+}
+
+.closeButton:hover {
+    color: #000;
+}
+
+.nomeProfissional {
+    font-size: 1.1em; 
+    color: #007bff;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.mes {
+  font-size: 1.5em; 
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+
+/* ======================================= */
+/* 2. ESTRUTURA DA TABELA (Cantos Retos) */
+/* ======================================= */
+
+.boxTabela {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+.boxTabela thead th {
+  color: #007bff;
+  font-size: 0.8em; 
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+.boxTabela tbody td {
+  height: 35px; 
+  line-height: 35px; 
+  font-size: 0.9em; 
+  color: #444;
+  
+  /* OPÇÃO 1: Cantos Retos */
+  border-radius: 0; 
+  
+  transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+  opacity: 0.5; 
+  cursor: default;
+  border: 1px solid transparent; 
+}
+
+/* Dias disponíveis (agenda cheia) */
+.diaDisponivel {
+    opacity: 1 !important; 
+    color: #333; 
+    cursor: pointer;
+    background-color: #eaf8ea; 
+    border: 1px solid #6AF568; 
+    font-weight: 600;
+    border-radius: 4px; /* Levemente arredondado para o bloco de destaque */
+}
+
+.diaDisponivel:hover {
+    background-color: #6AF568;
+    color: white;
+}
+
+/* Dia atualmente selecionado */
+.diaSelecionado {
+    background-color: #007bff;
+    color: white;
+    font-weight: 700;
+    opacity: 1 !important;
+    border: 1px solid #0056b3;
+    border-radius: 4px; /* Levemente arredondado para o bloco de destaque */
+}
+
+.boxTabela tbody td:empty {
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+}
+
+/* ======================================= */
+/* 3. SELETOR DE HORÁRIOS */
+/* ======================================= */
+
+.timeSelector {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+.timeTitle {
+  font-size: 1.1em; 
+  color: #007bff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.timePeriod h4 {
+  font-size: 1em; 
+  color: #333;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+.timeSlots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; 
+  margin-bottom: 15px;
+}
+
+.timeButton {
+  background-color: #f0f8ff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 6px 10px; 
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85em; 
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.timeButton:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.timeSelected {
+    background-color: #007bff;
+    color: white;
+    font-weight: 700;
+    border-color: #0056b3;
+}
+
+/* ======================================= */
+/* 4. BOTÃO DE CONFIRMAÇÃO */
+/* ======================================= */
+
+.confirmButton {
+    width: 100%;
+    padding: 12px; 
+    margin-top: 15px;
+    background-color: #6AF568; 
+    color: #333;
+    font-size: 1em; 
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.confirmButton:hover {
+    background-color: #4CAF50; 
+    color: white;
+    transform: translateY(-1px);
+}
