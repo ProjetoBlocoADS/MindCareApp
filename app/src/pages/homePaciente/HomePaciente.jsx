@@ -1,24 +1,73 @@
-import ListaPsicologos from "./components/ListaPsicologos"
-import CardUser from "../homePsicologo/componentes/CardUser"
+import { useState } from "react";
+import ListaPsicologos from "./components/ListaPsicologos";
+import CardUser from "../homePsicologo/componentes/CardUser";
 import ilustraHome from "../../assets/home/ilustraHome.png";
-
+import AppointmentList from "./components/AppointmentList";
 
 export default function HomePaciente() {
-    return(
-        <div  className="flex flex-col">
-           <CardUser
-                  avatar={ilustraHome}
-                  nome="Daniel Marini"
-                  profissao="Homem - 30 anos - Bancário"
-                />
-         <div className="ml-6 mt-5">
-        <h4 className="text-[12px] text-[#22318E]">Seja Bem Vindo!</h4>
-        <h2 className="text-[34px] text-[#4483CC] font-semibold relative -top-2">
+  const [appointments, setAppointments] = useState([]);
+
+  function handleAddAppointment(novo) {
+    setAppointments((prev) => [...prev, novo]);
+  }
+
+  function handleCancel(agendamento) {
+    setAppointments((prev) =>
+      prev.filter((item) => item.id !== agendamento.id)
+    );
+  }
+
+  return (
+    <div
+      className="
+        flex flex-col 
+        mx-auto w-full 
+        px-4 
+        max-w-[480px]        /* mobile e tablets pequenos */
+        sm:max-w-[640px]     /* tablets */
+        md:max-w-[768px]     /* telas médias */
+        lg:max-w-[900px]     /* desktop compacto */
+        xl:max-w-[1100px]    /* desktop grande */
+      "
+    >
+      {/* CARD DO USUÁRIO */}
+      <div className="mt-6 flex justify-center">
+        <CardUser
+          avatar={ilustraHome}
+          nome="Daniel Marini"
+          profissao="Homem - 30 anos - Bancário"
+        />
+      </div>
+
+      {/* TÍTULO */}
+      <div className="mt-6 px-2 sm:px-4">
+        <h4 className="text-[12px] sm:text-[14px] text-[#22318E]">
+          Seja Bem Vindo!
+        </h4>
+
+        <h2
+          className="
+            text-[30px] sm:text-[36px] 
+            text-[#4483CC] font-semibold
+            leading-tight
+          "
+        >
           Consultas
         </h2>
       </div>
-       <ListaPsicologos/>
-        </div>
-       
-    )
+
+      {/* LISTA DE PSICÓLOGOS */}
+      <div className="mt-6 flex justify-center">
+        <ListaPsicologos onAddAppointment={handleAddAppointment} />
+      </div>
+
+      {/* LISTA DE AGENDAMENTOS */}
+      <div className="mt-8 px-2 sm:px-4">
+        <AppointmentList
+          appointments={appointments}
+          onCancel={handleCancel}
+        />
+      </div>
+    </div>
+  );
 }

@@ -1,28 +1,52 @@
 import { Funnel, CircleArrowDown, Search } from 'lucide-react';
 
-export default function SearchBar({onChangeValue, inputValue, placeholder}) {
+export default function SearchBar({ onChangeValue, inputValue, placeholder }) {
 
-// aqui o valor do input sera passado como argumento para qualquer metodo em outro componente
-const handleChange = (e) => {
-  onChangeValue(e.target.value); // atualiza o estado do input
-};
+  const handleChange = (e) => {
+    onChangeValue(e.target.value);
+  };
 
   return (
-    <div className="w-[328px] h-[52px] flex items-center px-4 mt-6 bg-[#134496] mx-auto rounded-[26px]">
-      <div className="relative flex items-center ">
-        <Search className="absolute left-3 text-[#134496] w-4 h-4" />
+    <div
+      className="
+        w-full max-w-md
+        h-12
+        flex items-center 
+        px-4 mt-6 
+        bg-[#134496]
+        mx-auto 
+        rounded-2xl
+      "
+    >
+      <div className="relative flex items-center flex-1">
+        <Search
+          className="absolute left-3 text-gray-400 w-4 h-4"
+        />
+
         <input
           type="text"
           placeholder={placeholder}
           value={inputValue}
           onChange={handleChange}
-          className="px-6 pl-10 py-2 w-[223px] h-[34px] rounded-[26px] outline-none"
+          className="
+            w-full
+            bg-white
+            pl-10 pr-3 py-2
+            rounded-2xl
+            text-sm
+            outline-none
+            placeholder-gray-500
+          "
         />
       </div>
-      <div className="h-[24px] w-[1px] bg-white/30 mx-2"></div>
-      <div className="flex items-center gap-2">
-        <Funnel className="cursor-pointer" color='white' size={20} />
-        <CircleArrowDown className="cursor-pointer" color='white' size={20} />
+
+      {/* Divisão */}
+      <div className="h-6 w-px bg-white/30 mx-3"></div>
+
+      {/* Ícones */}
+      <div className="flex items-center gap-3">
+        <Funnel className="cursor-pointer text-white" size={20} />
+        <CircleArrowDown className="cursor-pointer text-white" size={20} />
       </div>
     </div>
   );
