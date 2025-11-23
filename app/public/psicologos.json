@@ -6,8 +6,16 @@
     "especialidade": ["Ansiedade", "Depressão", "TOC"],
     "genero": "masc",
     "valorSessao": 180,
-    "data": "05/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "05/12/2025",
+        "horarios": ["09:00h", "11:00h", "14:00h", "16:00h"]
+      },
+      {
+        "data": "08/12/2025",
+        "horarios": ["10:00h", "15:00h", "17:00h"]
+      }
+    ]
   },
   {
     "id": 2,
@@ -16,8 +24,16 @@
     "especialidade": ["Autoconhecimento", "Relacionamentos", "Traumas"],
     "genero": "fem",
     "valorSessao": 220,
-    "data": "04/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "05/12/2025",
+        "horarios": ["13:00h", "15:00h"]
+      },
+      {
+        "data": "09/12/2025",
+        "horarios": ["11:30h", "14:30h", "16:30h"]
+      }
+    ]
   },
   {
     "id": 3,
@@ -26,8 +42,16 @@
     "especialidade": ["Terapia de Casal", "Conflitos familiares", "Relacionamentos"],
     "genero": "masc",
     "valorSessao": 250,
-    "data": "06/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "06/12/2025",
+        "horarios": ["08:00h", "13:00h", "17:00h"]
+      },
+      {
+        "data": "11/12/2025",
+        "horarios": ["14:00h", "16:00h"]
+      }
+    ]
   },
   {
     "id": 4,
@@ -36,8 +60,16 @@
     "especialidade": ["Psicologia Infantil", "Adolescentes", "Dificuldades de aprendizagem"],
     "genero": "fem",
     "valorSessao": 170,
-    "data": "07/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "05/12/2025",
+        "horarios": ["10:30h", "15:30h"]
+      },
+      {
+        "data": "12/12/2025",
+        "horarios": ["10:00h", "11:00h", "15:00h"]
+      }
+    ]
   },
   {
     "id": 5,
@@ -46,8 +78,16 @@
     "especialidade": ["Carreira", "Síndrome de Burnout", "Liderança"],
     "genero": "masc",
     "valorSessao": 200,
-    "data": "05/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "09/12/2025",
+        "horarios": ["09:00h", "11:00h", "14:00h"]
+      },
+      {
+        "data": "15/12/2025",
+        "horarios": ["15:00h", "16:00h"]
+      }
+    ]
   },
   {
     "id": 6,
@@ -56,8 +96,16 @@
     "especialidade": ["Avaliação Neuropsicológica", "TDAH", "Reabilitação Cognitiva"],
     "genero": "fem",
     "valorSessao": 280,
-    "data": "03/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "05/12/2025",
+        "horarios": ["16:00h", "17:00h"]
+      },
+      {
+        "data": "10/12/2025",
+        "horarios": ["14:00h", "15:00h"]
+      }
+    ]
   },
   {
     "id": 7,
@@ -66,8 +114,16 @@
     "especialidade": ["Autoconhecimento", "Sentido da vida", "Ansiedade"],
     "genero": "masc",
     "valorSessao": 160,
-    "data": "06/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "08/12/2025",
+        "horarios": ["10:00h", "12:00h", "14:00h"]
+      },
+      {
+        "data": "13/12/2025",
+        "horarios": ["16:00h"]
+      }
+    ]
   },
   {
     "id": 8,
@@ -76,8 +132,16 @@
     "especialidade": ["Transtorno de Personalidade Borderline", "Desregulação Emocional", "Autolesão"],
     "genero": "fem",
     "valorSessao": 210,
-    "data": "04/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "05/12/2025",
+        "horarios": ["10:00h", "13:00h", "15:00h"]
+      },
+      {
+        "data": "16/12/2025",
+        "horarios": ["14:00h", "17:00h"]
+      }
+    ]
   },
   {
     "id": 9,
@@ -86,8 +150,16 @@
     "especialidade": ["Autoconhecimento", "Questões LGBTQIA+", "Ansiedade"],
     "genero": "outro",
     "valorSessao": 190,
-    "data": "07/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "06/12/2025",
+        "horarios": ["14:00h", "15:00h"]
+      },
+      {
+        "data": "17/12/2025",
+        "horarios": ["10:00h", "11:00h", "15:00h"]
+      }
+    ]
   },
   {
     "id": 10,
@@ -96,8 +168,16 @@
     "especialidade": ["Depressão", "Fobias", "Compulsões"],
     "genero": "fem",
     "valorSessao": 175,
-    "data": "03/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "05/12/2025",
+        "horarios": ["09:00h", "11:00h"]
+      },
+      {
+        "data": "18/12/2025",
+        "horarios": ["13:00h", "15:00h", "17:00h"]
+      }
+    ]
   },
   {
     "id": 11,
@@ -106,8 +186,16 @@
     "especialidade": ["Luto", "Relacionamentos", "Traumas de infância"],
     "genero": "masc",
     "valorSessao": 230,
-    "data": "08/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "08/12/2025",
+        "horarios": ["10:00h", "12:00h"]
+      },
+      {
+        "data": "19/12/2025",
+        "horarios": ["14:00h", "16:00h"]
+      }
+    ]
   },
   {
     "id": 12,
@@ -116,7 +204,15 @@
     "especialidade": ["Carreira", "Ansiedade", "Autoestima"],
     "genero": "fem",
     "valorSessao": 150,
-    "data": "05/11/2025",
-    "horario": "15:00h"
+    "disponibilidade": [
+      {
+        "data": "09/12/2025",
+        "horarios": ["08:00h", "13:00h", "15:00h"]
+      },
+      {
+        "data": "22/12/2025",
+        "horarios": ["10:00h", "11:00h"]
+      }
+    ]
   }
 ]

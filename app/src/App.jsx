@@ -8,9 +8,13 @@ import Footer from "./componentes/footer/Footer";
 import HomePsicologo from "./pages/homePsicologo/HomePsicologo";
 import HomePaciente from "./pages/homePaciente/HomePaciente"
 import PsicoProvider from "./provider/PsicoProvider";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import 'dayjs/locale/pt-br'
 
 function App() {
   return (
+    <LocalizationProvider dateAdapter={AdapterDayjs} locale="pt-br">
     <Router>
       <PsicoProvider>
         <Header />
@@ -28,6 +32,7 @@ function App() {
         <Footer />  
         </PsicoProvider>
     </Router>
+    </LocalizationProvider>
   );
 }
 

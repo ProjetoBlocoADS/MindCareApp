@@ -1,7 +1,13 @@
-import { Brain } from 'lucide-react';
-import "./logoMindCare.css"
+import { Brain } from "lucide-react";
 
-export default function LogoMindCare({onClick, style}) {
-    return <div onClick={onClick} className={style}><Brain size={30} />
-        <h1 className='titulo'>MindCare</h1></div>
+export default function LogoMindCare({ onClick }) {
+  return (
+    <div
+      onClick={onClick}
+      className="flex items-center gap-2 text-blue-400 cursor-pointer select-none pl-2"
+    >
+      <Brain size={30} />
+      <h1 className="text-[1.4rem] font-semibold">MindCare</h1>
+    </div>
+  );
 }
