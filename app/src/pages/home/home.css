@@ -4,10 +4,17 @@
     margin: 0 1rem;
 }
 
-.carrossel{
+.carrossel {
     display: flex;
-    justify-content: space-evenly;
-    gap: 2px;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .carrossel {
+        justify-content: center;
+        gap: 2rem;
+    }
 }

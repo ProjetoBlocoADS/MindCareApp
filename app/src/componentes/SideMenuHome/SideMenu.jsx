@@ -46,19 +46,19 @@ export default function SideMenu({ menuOpen, closeMenu }) {
           <li onClick={(e) => handleNavigate(e, "/cadastro")} className="cursor-pointer hover:text-gray-300">
             <a>Cadastre-se</a>
           </li>
-          <li onClick={(e) => handleNavigate(e, "/sobre")} className="cursor-pointer hover:text-gray-300">
+          <li onClick={(e) => handleNavigate(e, "/")} className="cursor-pointer hover:text-gray-300">
             <a>Sobre</a>
           </li>
-          <li onClick={(e) => handleNavigate(e, "/projeto")} className="cursor-pointer hover:text-gray-300">
+          <li onClick={(e) => handleNavigate(e, "/")} className="cursor-pointer hover:text-gray-300">
             <a>Projeto</a>
           </li>
-          <li onClick={(e) => handleNavigate(e, "/mentalcare")} className="cursor-pointer hover:text-gray-300">
+          <li onClick={(e) => handleNavigate(e, "/")} className="cursor-pointer hover:text-gray-300">
             <a>Mental Care</a>
           </li>
-          <li onClick={(e) => handleNavigate(e, "/ajuda")} className="cursor-pointer hover:text-gray-300">
+          <li onClick={(e) => handleNavigate(e, "/")} className="cursor-pointer hover:text-gray-300">
             <a>Preciso de Ajuda</a>
           </li>
-          <li onClick={(e) => handleNavigate(e, "/faq")} className="cursor-pointer hover:text-gray-300">
+          <li onClick={(e) => handleNavigate(e, "/")} className="cursor-pointer hover:text-gray-300">
             <a>FAQ</a>
           </li>
         </ul>

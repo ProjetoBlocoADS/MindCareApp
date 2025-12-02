@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="home">
       <img
-        className="banner"
+        className="md:w-[350px] mx-auto mt-10"
         src={banner}
         alt="Ilustração Mental Quebra-Cabeças"
       />
@@ -51,16 +51,18 @@ export default function Home() {
           </BotaoPadrao>
         </div>
 
-        <Descricao
-          titulo={conteudo.home.descricao[0].titulo}
-          descricao={conteudo.home.descricao[0].descricao}
-        />
-        <Descricao
-          titulo={conteudo.home.descricao[1].titulo}
-          descricao={conteudo.home.descricao[1].descricao}
-        />
+        <div className="md:flex md:flex-col md:items-center md:justify-center w-8/10 mt-0">
+          <Descricao
+            titulo={conteudo.home.descricao[0].titulo}
+            descricao={conteudo.home.descricao[0].descricao}
+          />
+          <Descricao
+            titulo={conteudo.home.descricao[1].titulo}
+            descricao={conteudo.home.descricao[1].descricao}
+          />
+        </div>
 
-        <div className="carrossel">
+        <div className="carrossel flex flex-wrap justify-center gap-4 mt-4">
           {conteudo.home.cards.map((card, i) => (
             <CardHome
               key={i}
