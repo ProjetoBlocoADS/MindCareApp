@@ -40,7 +40,7 @@ export default function HomePaciente() {
       </div>
 
       {/* TÍTULO */}
-      <div className="mt-6 px-2 sm:px-4">
+      <div className="flex flex-col items-center mt-6 px-2 sm:px-4">
         <h4 className="text-[12px] sm:text-[14px] text-[#22318E]">
           Seja Bem Vindo!
         </h4>
@@ -62,7 +62,7 @@ export default function HomePaciente() {
       </div>
 
       {/* LISTA DE AGENDAMENTOS */}
-      <div className="mt-8 px-2 sm:px-4">
+      <div className="mb-8 px-2 sm:px-4">
         <AppointmentList
           appointments={appointments}
           onCancel={handleCancel}
