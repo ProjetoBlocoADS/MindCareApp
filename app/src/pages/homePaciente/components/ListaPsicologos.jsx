@@ -84,6 +84,7 @@ export default function ListaPsicologos({ onAddAppointment }) {
               hover:shadow-md 
               transition
             "
+            data-testid="profissional-card"
           >
             <Calendar className="text-blue-500" />
 
@@ -112,6 +113,7 @@ export default function ListaPsicologos({ onAddAppointment }) {
                 justify-center
                 whitespace-nowrap
               "
+
             >
               <p className="text-black text-[13px] font-semibold">
                 Agendar
@@ -126,6 +128,8 @@ export default function ListaPsicologos({ onAddAppointment }) {
           psicologos={psicoParaAgendar}
           closeModal={() => setIsOpen(false)}
           onAddAppointment={onAddAppointment}
+          id={"modal-agendar"}
+          testTitle = {"modal-title"}
         />
       )}
     </div>

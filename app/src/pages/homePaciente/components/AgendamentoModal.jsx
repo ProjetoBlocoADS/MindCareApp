@@ -42,6 +42,8 @@ export default function AgendamentoModal({
   psicologos,
   closeModal,
   onAddAppointment,
+  id,
+  testTitle
 }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -109,7 +111,7 @@ export default function AgendamentoModal({
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
+      <div data-testid={id}  className="fixed inset-0 z-[999] flex items-center justify-center p-4">
         {/* Fundo escuro */}
         <div
           className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -133,7 +135,7 @@ export default function AgendamentoModal({
             <X />
           </button>
 
-          <h2 className="text-xl font-semibold text-center mt-4 mb-4">
+          <h2 data-testid={testTitle} className="text-xl font-semibold text-center mt-4 mb-4">
             Agendar com {state.psicologo?.nome}
           </h2>
 
