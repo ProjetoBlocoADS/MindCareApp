@@ -40,6 +40,26 @@ Após iniciar, abra seu navegador e acesse a URL mostrada no terminal (geralment
 - 🤝 Conexão entre pacientes e psicólogos
 - 📅 Agendamento de consultas
 - 🔍 Funcionalidade de busca e filtros
+-  🔐 Automação de testes E2E com Cypress
+
+## Como rodar o cypress
+
+```bash
+# Navegue até o diretório app
+cd app
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm install cypress --save-dev
+
+#Inicie o GUI do cypress
+npx cypress open
+
+#Rodar no headless
+npx cypress run
+```
 
 ## 🌟 Contribuições
 
