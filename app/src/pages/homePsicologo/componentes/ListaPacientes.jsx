@@ -26,8 +26,19 @@ export default function ListaPacientes() {
 }, []);
 
 
-  if (isLoading) return <p>Carregando pacientes...</p>;
-  if (error) return <p>Erro: {error}</p>;
+ if (isLoading)
+  return (
+    <div className="w-full max-w-[359px] mx-auto mt-6 bg-blue-100 border border-blue-300 text-blue-700 p-4 rounded-xl text-center animate-pulse">
+      Carregando pacientes...
+    </div>
+  );
+
+if (error)
+  return (
+    <div className="w-full max-w-[359px] mx-auto mt-6 bg-red-100 border border-red-300 text-red-700 p-4 rounded-xl text-center">
+      Erro: {error}
+    </div>
+  );
 
   return (
     <div className="w-full max-w-[359px] h-[500px] bg-[#EEEEEE] rounded-[24px] mx-auto mb-10 md:max-w-[500px]">
