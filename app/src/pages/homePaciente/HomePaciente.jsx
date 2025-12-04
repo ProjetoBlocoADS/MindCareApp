@@ -57,12 +57,12 @@ export default function HomePaciente() {
       </div>
 
       {/* LISTA DE PSICÓLOGOS */}
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex justify-center" data-testid="lista-psicologos">
         <ListaPsicologos onAddAppointment={handleAddAppointment} />
       </div>
 
       {/* LISTA DE AGENDAMENTOS */}
-      <div className="mb-8 px-2 sm:px-4">
+      <div className="mb-8 px-2 sm:px-4" data-testid="lista-agendamentos">
         <AppointmentList
           appointments={appointments}
           onCancel={handleCancel}

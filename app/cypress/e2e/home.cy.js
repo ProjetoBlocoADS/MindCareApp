@@ -3,7 +3,7 @@
 /* eslint-env mocha, browser */
 /* global cy, beforeEach, it, expect, describe */
 
-describe("Home page - volume of simple checks", () => {
+ describe("Página Inicial - volume de verificações simples", () => {
   const baseUrl = "http://localhost:5173";
   const titulo1 = "Sua Saúde, a um click de distância";
   const titulo2 = "Nossas Funcionalidades";
@@ -12,25 +12,25 @@ describe("Home page - volume of simple checks", () => {
     cy.visit(baseUrl);
   });
 
-  it("banner is visible and has correct alt text", () => {
+  it("banner está visível e possui texto alternativo correto", () => {
     cy.get("img.banner")
       .should("be.visible")
       .and("have.attr", "alt", "Ilustração Mental Quebra-Cabeças");
   });
 
-  it("toolbar buttons exist (Cadastro / Login) and are actionable", () => {
+  it("botões da barra de ferramentas existem (Cadastro / Login) e são acionáveis", () => {
     cy.get(".toolbar-botao").within(() => {
       cy.contains("Cadastro").should("exist");
       cy.contains("Login").should("exist");
     });
   });
 
-  it("descriptions render both titles and paragraphs", () => {
+  it("descrições exibem ambos os títulos e parágrafos", () => {
     cy.contains(titulo1).should("be.visible");
     cy.contains(titulo2).should("be.visible");
   });
 
-  it("renders the expected number of cards with labels", () => {
+  it("renderiza o número esperado de cards com rótulos", () => {
     cy.get(".carrossel")
       .children()
       .should("have.length", 2);
@@ -38,13 +38,13 @@ describe("Home page - volume of simple checks", () => {
     cy.contains("Tratamento").should("exist");
   });
 
-  it("all images on the page include an alt attribute", () => {
+  it("todas as imagens na página possuem atributo alt", () => {
     cy.get("img").each(($img) => {
       expect($img.attr("alt")).to.be.ok;
     });
   });
 
-  it("toolbar buttons are focusable (basic a11y)", () => {
+  it("botões da barra de ferramentas são focáveis (acessibilidade básica)", () => {
     cy.get(".toolbar-botao button, .toolbar-botao *:not(script)")
       .first()
       .focus()
@@ -58,7 +58,7 @@ describe("Home page - volume of simple checks", () => {
   ];
 
   viewports.forEach((vp) => {
-    it(`responsive check: viewport ${vp.name}`, () => {
+    it(`verificação responsiva: viewport ${vp.name}`, () => {
       cy.viewport(vp.width, vp.height);
       cy.get("img.banner").should("be.visible");
       cy.get(".carrossel").should("be.visible");
@@ -67,13 +67,13 @@ describe("Home page - volume of simple checks", () => {
 
   const smallChecks = Array.from({ length: 20 }, (_, i) => i + 1);
   smallChecks.forEach((n) => {
-    it(`quick check #${n} - banner + cards quick assertions`, () => {
+    it(`verificação rápida #${n} - banner + cards`, () => {
       cy.get("img.banner").should("be.visible");
       cy.get(".carrossel").children().its('length').should('be.gte', 1);
     });
   });
 
-  it("clicking Cadastro navigates to /cadastro", () => {
+  it("ao clicar em Cadastro navega para /cadastro", () => {
     cy.contains("Cadastro").click();
     cy.url().should("include", "/cadastro");
   });
