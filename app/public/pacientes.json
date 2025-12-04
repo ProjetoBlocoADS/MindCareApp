@@ -1,0 +1,11 @@
+{
+  "pacientes": [
+    { "id": 1, "nome": "Ana Souza", "patologiaMental": "Ansiedade crônica" },
+    { "id": 2, "nome": "Bruno Lima", "patologiaMental": "Depressão maior" },
+    { "id": 3, "nome": "Carla Mendes", "patologiaMental": "TOC" },
+    { "id": 4, "nome": "Diego Ferreira", "patologiaMental": "Transtorno bipolar" },
+    { "id": 5, "nome": "Eduarda Silva", "patologiaMental": "Síndrome do pânico" },
+    { "id": 6, "nome": "Felipe Rocha", "patologiaMental": "TEPT" },
+    { "id": 7, "nome": "Gabriela Torres", "patologiaMental": "Fobia social" }
+  ]
+}

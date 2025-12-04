@@ -30,12 +30,12 @@ describe("Página Inicial do Paciente - cenários essenciais", () => {
     cy.get(".lista-agendamentos, [data-testid='lista-agendamentos']").should("exist");
   });
 
-    it('deve abrir modal de agendamento para um profissional', () => {
-    cy.get('[data-testid="profissional-card"]').first().click();
+  it('deve abrir modal de agendamento para um profissional', () => {
+  cy.get('[data-testid="profissional-card"]').first().click();
 
-    cy.get('[data-testid="modal-agendar"]').should('be.visible');
+  cy.get('[data-testid="modal-agendar"]').should('be.visible');
 
-    cy.get('[data-testid="modal-title"]')
-      .should('contain.text', 'Agendar com Dr.');
+  cy.get('[data-testid="modal-title"]')
+    .should('contain.text', 'Agendar com Dr.');
   });
 });
