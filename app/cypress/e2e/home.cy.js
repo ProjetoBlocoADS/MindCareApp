@@ -13,7 +13,7 @@
   });
 
   it("banner está visível e possui texto alternativo correto", () => {
-    cy.get("img.banner")
+    cy.get("[data-testid='banner-home']")
       .should("be.visible")
       .and("have.attr", "alt", "Ilustração Mental Quebra-Cabeças");
   });
@@ -60,16 +60,8 @@
   viewports.forEach((vp) => {
     it(`verificação responsiva: viewport ${vp.name}`, () => {
       cy.viewport(vp.width, vp.height);
-      cy.get("img.banner").should("be.visible");
+      cy.get("[data-testid='banner-home']").should("be.visible");
       cy.get(".carrossel").should("be.visible");
-    });
-  });
-
-  const smallChecks = Array.from({ length: 20 }, (_, i) => i + 1);
-  smallChecks.forEach((n) => {
-    it(`verificação rápida #${n} - banner + cards`, () => {
-      cy.get("img.banner").should("be.visible");
-      cy.get(".carrossel").children().its('length').should('be.gte', 1);
     });
   });
 

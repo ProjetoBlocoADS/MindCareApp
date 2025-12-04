@@ -40,6 +40,7 @@ export default function Home() {
         className="md:w-[350px] mx-auto mt-10"
         src={banner}
         alt="Ilustração Mental Quebra-Cabeças"
+        data-testid='banner-home'
       />
       <div>
         <div className="toolbar-botao">
