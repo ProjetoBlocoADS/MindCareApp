@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-/* eslint-env mocha, browser /
-/ global cy, beforeEach, it, expect, describe */
+/* eslint-env mocha, browser */
+/* global cy, beforeEach, it, describe */
 
 describe("Página Inicial do Paciente - cenários essenciais", () => {
   const baseUrl = "http://localhost:5173/home-paciente";

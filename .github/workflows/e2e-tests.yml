@@ -3,9 +3,11 @@ name: E2E Tests
 on:
   push:
     branches:
+      - main
       - master
   pull_request:
     branches:
+      - main
       - master
 
 jobs:
@@ -19,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
           cache-dependency-path: app/package-lock.json
 
@@ -27,14 +29,24 @@ jobs:
         working-directory: ./app
         run: npm install
 
-      - name: Build application
+      - name: Instalar wait-on
         working-directory: ./app
-        run: npm run build
+        run: npm install wait-on --save-dev
+
+      - name: Iniciar servidor
+        working-directory: ./app
+        run: npm run dev &
+
+      - name: Esperar servidor iniciar
+        working-directory: ./app
+        run: npx wait-on http://localhost:5173
 
       - name: Run Cypress tests
         working-directory: ./app
         run: npm run cypress:run
         continue-on-error: false
+        env:
+          NODE_OPTIONS: --no-warnings
 
       - name: Upload Cypress videos (on failure)
         if: failure()
